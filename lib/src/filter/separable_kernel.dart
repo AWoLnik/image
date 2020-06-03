@@ -26,14 +26,14 @@ class SeparableKernel {
   /// for a single dimension. If [horizontal is true, the filter will be
   /// applied to the horizontal axis, otherwise it will be appied to the
   /// vertical axis.
-  void apply(Image src, Image dst, {bool horizontal = true}) {
+  void apply(Image src, Image dst, {bool horizontal = true, int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0}) {
     if (horizontal) {
-      for (var y = 0; y < src.height; ++y) {
-        _applyCoeffsLine(src, dst, y, src.width, horizontal);
+      for (var y = y1; y < y2; ++y) {
+        _applyCoeffsLine(src, dst, y, x2 - x1, horizontal);
       }
     } else {
-      for (var x = 0; x < src.width; ++x) {
-        _applyCoeffsLine(src, dst, x, src.height, horizontal);
+      for (var x = x1; x < x2; ++x) {
+        _applyCoeffsLine(src, dst, x, y2 - y1, horizontal);
       }
     }
   }

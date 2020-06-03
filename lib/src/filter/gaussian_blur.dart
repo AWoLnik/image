@@ -9,7 +9,7 @@ Map<int, SeparableKernel> _gaussianKernelCache = {};
 /// Apply gaussian blur to the [src] image. [radius] determines how many pixels
 /// away from the current pixel should contribute to the blur, where 0 is no
 /// blur and the larger the radius, the stronger the blur.
-Image gaussianBlur(Image src, int radius) {
+Image gaussianBlur(Image src, int radius, {int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0}) {
   if (radius <= 0) {
     return src;
   }
@@ -39,5 +39,5 @@ Image gaussianBlur(Image src, int radius) {
     _gaussianKernelCache[radius] = kernel;
   }
 
-  return separableConvolution(src, kernel);
+  return separableConvolution(src, kernel, x1: x1, y1: y1, x2: x2, y2: y2);
 }
