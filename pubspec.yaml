@@ -1,4 +1,4 @@
-name: image
+name: adam_image
 version: 2.1.13
 description: Provides server and web apps the ability to load, manipulate, and save images with various image file formats including PNG, JPEG, GIF, BMP, WebP, TIFF, TGA, PSD, PVR, and OpenEXR.
 homepage: https://github.com/brendan-duncan/image

@@ -1,4 +1,4 @@
-import 'package:image/src/util/octree_quantizer.dart';
+import 'package:adam_image/src/util/octree_quantizer.dart';
 
 import '../image.dart';
 import '../util/neural_quantizer.dart';

@@ -2,7 +2,7 @@ import 'dart:html';
 import 'dart:async';
 import 'dart:html' as prefix0;
 import 'dart:typed_data';
-import 'package:image/image.dart';
+import 'package:adam_image/image.dart';
 
 /// Decode and display various image formats. This is used as a visual
 /// unit-test to identify problems that may occur after the translation to

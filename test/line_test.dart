@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:test/test.dart';
 
-import 'package:image/image.dart';
+import 'package:adam_image/image.dart';
 
 int blackcolor = getColor(0, 0, 0);
 int whitecolor = getColor(255, 255, 255);

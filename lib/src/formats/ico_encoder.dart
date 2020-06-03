@@ -1,4 +1,4 @@
-import 'package:image/src/formats/png_encoder.dart';
+import 'package:adam_image/src/formats/png_encoder.dart';
 
 import '../image.dart';
 import '../util/output_buffer.dart';

@@ -1,5 +1,5 @@
 import 'dart:typed_data';
-import 'package:image/image.dart';
+import 'package:adam_image/image.dart';
 
 import '../../image.dart';
 

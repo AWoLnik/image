@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:image/image.dart';
+import 'package:adam_image/image.dart';
 import '../../formats/decode_info.dart';
 import '../../util/input_buffer.dart';
 

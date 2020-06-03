@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:image/image.dart';
+import 'package:adam_image/image.dart';
 import 'package:test/test.dart';
 
 void main() {
