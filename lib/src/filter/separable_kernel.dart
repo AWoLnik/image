@@ -29,11 +29,11 @@ class SeparableKernel {
   void apply(Image src, Image dst, {bool horizontal = true, int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0}) {
     if (horizontal) {
       for (var y = y1; y < y2; ++y) {
-        _applyCoeffsLine(src, dst, y, src.width, horizontal);
+        _applyCoeffsLine(src, dst, y, src.width, horizontal, x1: x1, x2: x2);
       }
     } else {
       for (var x = x1; x < x2; ++x) {
-        _applyCoeffsLine(src, dst, x, src.height, horizontal);
+        _applyCoeffsLine(src, dst, x, src.height, horizontal, x1: y1, x2: y2);
       }
     }
   }
@@ -56,8 +56,8 @@ class SeparableKernel {
   }
 
   void _applyCoeffsLine(
-      Image src, Image dst, int y, int width, bool horizontal) {
-    for (var x = 0; x < width; x++) {
+      Image src, Image dst, int y, int width, bool horizontal, {int x1 = 0, int x2 = 0}) {
+    for (var x = x1; x < x2; x++) {
       num r = 0.0;
       num g = 0.0;
       num b = 0.0;
